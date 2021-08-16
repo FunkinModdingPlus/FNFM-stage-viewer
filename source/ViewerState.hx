@@ -13,18 +13,18 @@ import flixel.addons.ui.FlxUI;
 import flixel.addons.ui.FlxUITabMenu;
 import flixel.addons.ui.FlxUIDropDownMenu;
 import flixel.addons.ui.FlxInputText;
+import flixel.addons.ui.FlxUIInputText;
 
 class ViewerState extends FlxState
 {
     var list:String;
     var listsplit:Array<String>;
-    
+    var stage = new FlxUIInputText(10, 10, 70, 'philly', 8);
     var stagestuff:FlxInputText;
     var stagetext:String;
     var part:FlxSprite;
 	override public function create()
         {
-            var stage = new FlxUIInputText(10, 10, 70, 'philly', 8);
             super.create();
             if (stagestuff.text == 'philly') {
                 var stagesParts= sys.io.File.getContent('assets/images/stages/' + stagestuff.text + 'partlist.txt');
@@ -36,7 +36,7 @@ class ViewerState extends FlxState
                 for (i in 0...artsplit.length) {
                     part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit[i]);
                     for (i in 0...scrollsplit.length) {
-                        part.scrollFactor.set(artsplit[i], artsplit[i]);
+                        part.scrollFactor.set(Sdt.parseFloat(artsplit[i]), Sdt.parseFloat(artsplit[i]));
                     };
                 };
             };
@@ -63,7 +63,7 @@ class ViewerState extends FlxState
                         var scrollsplit2:Array<String>;
                         scrollsplit2 = scroll2.split('\n');
                         artsplit2 = stagesParts2.split('\n');
-                        for (i in 0...artsplit.length) {
+                        for (i in 0...artsplit2.length) {
                             part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit2[i]);
                             for (i in 0...scrollsplit2.length) {
                                 part.scrollFactor.set(artsplit2[i], artsplit2[i]);
