@@ -25,9 +25,9 @@ class ViewerState extends FlxState
             var stage = new FlxUIInputText(10, 10, 70, 'philly', 8);
             super.create();
             if (stagestuff.text == 'philly') {
-                var stagesParts= sys.io.File.getContent(('assets/images/stages/' + stagestuff.text + 'partlist.txt');
+                var stagesParts= sys.io.File.getContent('assets/images/stages/' + stagestuff.text + 'partlist.txt');
                 var artsplit:Array<String>;
-                var scroll = sys.io.File.getContent(('assets/images/stages/' + stagestuff.text + 'sf.txt');
+                var scroll = sys.io.File.getContent('assets/images/stages/' + stagestuff.text + 'sf.txt');
                 var scrollsplit:Array<String>;
                 scrollsplit = scroll.split('\n');
                 artsplit = stagesParts.split('\n');
