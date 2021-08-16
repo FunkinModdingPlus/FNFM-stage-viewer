@@ -57,7 +57,7 @@ class ViewerState extends FlxState
                     if (FlxG.keys.pressed.ENTER) {
                         remove(part);
                         trace('we are loading some stuff');
-                        var stagesParts2= sys.io.File.getContent('assets/images/stages/' + stagestuff.text + 'partslist.txt');
+                        var stagesParts2= sys.io.File.getContent('assets/images/stages/' + stagestuff.text + 'partlist.txt');
                         var artsplit2:Array<String>;
                         var scroll2 = sys.io.File.getContent('assets/images/stages/' + stagestuff.text + 'sf.txt');
                         var scrollsplit2:Array<String>;
