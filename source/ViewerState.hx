@@ -20,6 +20,7 @@ class ViewerState extends FlxState
     
     var stagestuff:FlxInputText;
     var stagetext:String;
+    var part:FlxSprite;
 	override public function create()
         {
             var stage = new FlxUIInputText(10, 10, 70, 'philly', 8);
@@ -32,7 +33,7 @@ class ViewerState extends FlxState
                 scrollsplit = scroll.split('\n');
                 artsplit = stagesParts.split('\n');
                 for (i in 0...artsplit.length) {
-                    public var part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit[i]);
+                    part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit[i]);
                     for (i in 0...scrollsplit.length) {
                         part.scrollFactor.set(artsplit[i], artsplit[i]);
                     };
@@ -62,9 +63,10 @@ class ViewerState extends FlxState
                         scrollsplit2 = scroll2.split('\n');
                         artsplit2 = stagesParts2.split('\n');
                         for (i in 0...artsplit.length) {
-                            public var part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit2[i]);
+                            part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit2[i]);
                             for (i in 0...scrollsplit2.length) {
-                                part2.scrollFactor.set(artsplit2[i], artsplit2[i]);
+                                part.scrollFactor.set(artsplit2[i], artsplit2[i]);
+                                add(part);
                             };
                         };
                     };
