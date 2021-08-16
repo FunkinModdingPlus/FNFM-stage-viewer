@@ -57,7 +57,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: linuxBuild
-          path: 'export/release/linux/bin' 
+          path: 'export/linux/bin' 
       - name: Compile HTML5
         run: haxelib run lime build Project.xml html5
       
@@ -65,7 +65,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: html5Build
-          path: export/release/html5/bin
+          path: export/html5/bin
   buildWindows:
     runs-on: windows-latest
     
@@ -106,14 +106,14 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: windowsBuild
-          path: export/release/windows/bin
+          path: export/windows/bin
       - name: Compile 32 bit
         run: haxelib run lime build windows -D32bit -32
       - name: Publish 32bit
         uses: actions/upload-artifact@v2
         with:
           name: windows32Build
-          path: export/32bit/windows/bin
+          path: export/windows/bin
   buildMac:
     runs-on: macos-latest
 
@@ -153,4 +153,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: macBuild
-          path: export/release/macos/bin
+          path: export/macos/bin
