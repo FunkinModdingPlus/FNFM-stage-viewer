@@ -14,10 +14,16 @@ class PlayState extends FlxState
 	override public function create()
 	{
 		super.create();
+		var myButton = new FlxButton(0, 0, "View", press);
 	}
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
 	}
+	function press():Void
+		{
+			trace('view time');
+			FlxG.switchState(new ViewerState());
+		}
 
 }
