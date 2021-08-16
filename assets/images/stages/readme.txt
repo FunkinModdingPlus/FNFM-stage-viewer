@@ -1,4 +1,9 @@
-the sfx.txt file has the scroll factors basicly how much it moves when the camera moves it goes in this order
+BEFORE ANYTHING MAKE A FOLDER IN HERE CALLED ANYHTING BUT IT MUST BE LOWERCASE AND MUST HAVE NO SPACES
+then add the folder name to stagelist.txt and move all ur images in that folder
+
+create a parts.txt and a sf.txt
+
+the sf.txt file has the scroll factors basicly how much it moves when the camera moves it goes in this order
 
 bg
 parts
