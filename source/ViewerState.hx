@@ -35,8 +35,8 @@ class ViewerState extends FlxState
                     public var part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit[i]);
                     for (i in 0...scrollsplit.length) {
                         part.scrollFactor.set(artsplit[i], artsplit[i]);
-                    }
-                }
+                    };
+                };
             };
             list = sys.io.File.getContent('assets/images/stages/stagelist.txt');
             listsplit = list.split('\n');
@@ -65,8 +65,8 @@ class ViewerState extends FlxState
                             public var part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit2[i]);
                             for (i in 0...scrollsplit2.length) {
                                 part2.scrollFactor.set(artsplit2[i], artsplit2[i]);
-                            }
-                        }
+                            };
+                        };
                     };
                 }
             }
