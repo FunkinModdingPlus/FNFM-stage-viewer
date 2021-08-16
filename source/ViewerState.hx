@@ -12,6 +12,7 @@ import flixel.ui.FlxButton;
 import flixel.addons.ui.FlxUI;
 import flixel.addons.ui.FlxUITabMenu;
 import flixel.addons.ui.FlxUIDropDownMenu;
+import flixel.addons.ui.FlxInputText;
 
 class ViewerState extends FlxState
 {
