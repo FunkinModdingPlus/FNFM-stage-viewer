@@ -31,8 +31,6 @@ class ViewerState extends FlxState
                 var scrollsplit:Array<String>;
                 scrollsplit = scroll.split('\n');
                 artsplit = stagesParts.split('\n');
-                public var SplitCurrent:String;
-                public var partCurrent:Float;
                 for (i in 0...artsplit.length) {
                     public var part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit[i]);
                     for (i in 0...scrollsplit.length) {
@@ -63,8 +61,6 @@ class ViewerState extends FlxState
                         var scrollsplit2:Array<String>;
                         scrollsplit2 = scroll2.split('\n');
                         artsplit2 = stagesParts2.split('\n');
-                        public var SplitCurrent2:String;
-                        public var partCurrent2:Float;
                         for (i in 0...artsplit.length) {
                             public var part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit2[i]);
                             for (i in 0...scrollsplit2.length) {
