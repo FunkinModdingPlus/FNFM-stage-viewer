@@ -26,6 +26,7 @@ class ViewerState extends FlxState
 	override public function create()
         {
             super.create();
+            stagestuff = stage;
             if (stagestuff.text == 'philly') {
                 var stagesParts= sys.io.File.getContent('assets/images/stages/' + stagestuff.text + 'partlist.txt');
                 var artsplit:Array<String>;
@@ -52,6 +53,7 @@ class ViewerState extends FlxState
             stagetext = stagestuff.text;
             for (i in 0...listsplit.length) {
                 //listsplit[i]
+
                 if (stagestuff.text == listsplit[i]) {
                     trace('eyyyyyy');
                     if (FlxG.keys.pressed.ENTER) {
@@ -66,7 +68,7 @@ class ViewerState extends FlxState
                         for (i in 0...artsplit2.length) {
                             part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit2[i]);
                             for (i in 0...scrollsplit2.length) {
-                                part.scrollFactor.set(artsplit2[i], artsplit2[i]);
+                                part.scrollFactor.set(Std.parseFloat(artsplit2[i]), Std.parseFloat(artsplit2[i]));
                                 add(part);
                             };
                         };
