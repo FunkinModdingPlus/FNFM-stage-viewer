@@ -1,5 +1,6 @@
 package;
 
+import cpp.StdString;
 import CoolUtil.Files;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -37,7 +38,7 @@ class ViewerState extends FlxState
                 for (i in 0...artsplit.length) {
                     part = new FlxSprite().loadGraphic('assets/images/stages/' + stagestuff.text + artsplit[i]);
                     for (i in 0...scrollsplit.length) {
-                        part.scrollFactor.set(Sdt.parseFloat(artsplit[i]), Sdt.parseFloat(artsplit[i]));
+                        part.scrollFactor.set(Std.parseFloat(artsplit[i]), Std.parseFloat(artsplit[i]));
                     };
                 };
             };

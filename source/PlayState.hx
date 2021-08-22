@@ -15,6 +15,8 @@ class PlayState extends FlxState
 	{
 		super.create();
 		var myButton = new FlxButton(0, 0, "View", press);
+		myButton.screenCenter();
+		add(myButton);
 	}
 	override public function update(elapsed:Float)
 	{
